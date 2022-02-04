@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background:#1f2937;
+   --heading-color:#ffc13b;
+   --heading-bg:#474973;
+   --primary-color:#f9faf8;
+   --secondary-color:#e5e7eb;
+}
+body {
+    background: var(--background) ;
+    }
+    /* ------------------Heading--------------------------------------- */
+.title {
+    height: 12vh;
+    font-size: 28px;
+    font-family: 'Bungee', cursive;   
+    color: var(--heading-color);
+    background: var(--heading-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* -------------------grid container------------------------- */
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: flex-start;
+    color:var(--primary-color);
+    font-family: 'Roboto Condensed', sans-serif;
+    row-gap: 20px;
+}
+/* ------------------Choose Your Weapon heading------------------- */
+.content {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+/* -----------------------Scoreboard------------------------------- */
+.score-board {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-size: 20px;
+    row-gap: 30px;
+    justify-items: center;
+}
+/* ---------------------Icons-------------------------------------- */
+.choices {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.choice {
+    margin: 10px;
+    border: 4px solid var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 20px;
+    font-size: 50px;
+    background: var(--heading-bg);
+    transition: all 0.5s ease-in-out;
+}
+.choice:hover {
+    background: var(--heading-color);
+}
+
+/* -----------------------------Media queries--------------------------------- */
+@media(max-width:1010px) {
+    .title{ 
+        font-size: 25px;
+    }
+}
+@media(max-width:735px) {
+    .title{ 
+        font-size: 20px;
+    }
+}
+@media(max-width:500px) {
+    .title{ 
+        font-size: 15px;
+    }
+    .content h1 {
+        font-size: 30px;
+    }
+}
+@media(max-width:420px) {
+    .title{ 
+        font-size: 15px;
+    }
+    .content h2 {
+        font-size: 20px;
+    }
+    .choices {
+        justify-content: space-between;
+    }
+    .choice {
+        padding: 10px;
+
+    }
+}
+@media(max-width:360px) {
+    .title{ 
+        font-size: 12px;
+    }
+    .content h2 {
+        width: 80%;
+        margin: auto;
+    }
+    .score-board h2 {
+        font-size: 25px;
+    }
+}
